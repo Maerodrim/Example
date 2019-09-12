@@ -1,6 +1,7 @@
 package ru.ssau.tk.sergunin.practoop.Person;
 
 import org.testng.annotations.Test;
+import ru.ssau.tk.sergunin.practoop.Person.Gender.Gender;
 
 import static org.testng.Assert.*;
 
@@ -74,17 +75,17 @@ public class PersonTest {
 
     @Test(groups = {"unit1"})
     public void testGender() {
-        Person firstHuman = new Person(236235444);
+        Person firstHuman = new Person("Chylc", "Gans", 236235444);
         Person secondHuman = new Person("Chylc", "Gans");
-        Person thirdHuman = new Person("Chylc", "Gans", 236235444);
+        Person thirdHuman = new Person("Chylc", "Gans", 236235444,Gender.MALE);
 
-        firstHuman.setgender(1);
-        secondHuman.setgender("FEMALE");
-        thirdHuman.setgender(913463494);
+        firstHuman.setgender(Gender.MALE);
+        secondHuman.setgender(Gender.FEMALE);
+        thirdHuman.setgender(Gender.AGENDER);
 
-        assertEquals(firstHuman.getgender(), 236235444);
-        assertEquals(secondHuman.getgender(), "Chylc");
-        assertEquals(thirdHuman.getgender(), 236235444);
+        assertEquals(firstHuman.getgender(), Gender.MALE);
+        assertEquals(secondHuman.getgender(), Gender.FEMALE);
+        assertEquals(thirdHuman.getgender(), Gender.AGENDER);
 
     }
 }
