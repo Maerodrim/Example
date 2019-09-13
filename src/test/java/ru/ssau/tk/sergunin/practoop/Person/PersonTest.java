@@ -77,7 +77,7 @@ public class PersonTest {
     public void testGender() {
         Person firstHuman = new Person("Chylc", "Gans", 236235444);
         Person secondHuman = new Person("Chylc", "Gans");
-        Person thirdHuman = new Person("Chylc", "Gans", 236235444,Gender.MALE);
+        Person thirdHuman = new Person("Chylc", "Gans", 236235444, Gender.MALE);
 
         firstHuman.setgender(Gender.MALE);
         secondHuman.setgender(Gender.FEMALE);

@@ -1,6 +1,7 @@
 package ru.ssau.tk.sergunin.practoop.Point;
 
 import org.testng.annotations.Test;
+import ru.ssau.tk.sergunin.practoop.Generator.Resettable;
 
 import static org.testng.Assert.assertEquals;
 
@@ -15,5 +16,12 @@ public class NamedPointTest {
         assertEquals(firstOperation.getNamedPoint(), "Origin");
         assertEquals(secondOperation.getNamedPoint(), "Gans");
         assertEquals(thirdOperation.getNamedPoint(), "Tocha");
+    }
+
+    @Test
+    public void testReset() {
+        NamedPoint FuncH = new NamedPoint("Tocha", 1, 1, 1);
+        FuncH.reset();
+        assertEquals(FuncH.getNamedPoint(), "Absent");
     }
 }

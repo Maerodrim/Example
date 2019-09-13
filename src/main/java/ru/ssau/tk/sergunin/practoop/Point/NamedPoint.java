@@ -1,6 +1,8 @@
 package ru.ssau.tk.sergunin.practoop.Point;
 
-public class NamedPoint extends Point {
+import ru.ssau.tk.sergunin.practoop.Generator.Resettable;
+
+public class NamedPoint extends Point implements Resettable {
     private String Name;
     public NamedPoint ( String Name, double pointX , double pointY , double pointZ){
         super(pointX, pointY, pointZ);
@@ -17,4 +19,5 @@ public class NamedPoint extends Point {
     public NamedPoint (){
         this("Origin",0.,0.,0.);
     }
+    public void reset(){Name="Absent";}
 }
