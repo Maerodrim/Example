@@ -8,37 +8,12 @@ public class AllGetTest {
 
     @Test
     public void testPrintType() {
-    }
-
-    @Test
-    public void testTestPrintType() {
-    }
-
-    @Test
-    public void testTestPrintType1() {
-    }
-
-    @Test
-    public void testTestPrintType2() {
-    }
-
-    @Test
-    public void testTestPrintType3() {
-    }
-
-    @Test
-    public void testTestPrintType4() {
-    }
-
-    @Test
-    public void testTestPrintType5() {
-    }
-
-    @Test
-    public void testTestPrintType6() {
-    }
-
-    @Test
-    public void testTestPrintType7() {
+        AllGet.printType(5);
+        AllGet.printType(5.);
+        AllGet.printType("string");
+        AllGet.printType('c');
+        AllGet.printType(true);
+        AllGet.printType(763098);
+        AllGet.printType(5);
     }
 }
