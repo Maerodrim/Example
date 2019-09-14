@@ -5,7 +5,7 @@ import org.testng.annotations.Test;
 import static org.testng.Assert.*;
 
 public class AllGetTest {
-
+  //TODO
     @Test
     public void testPrintType() {
         AllGet.printType(5);
