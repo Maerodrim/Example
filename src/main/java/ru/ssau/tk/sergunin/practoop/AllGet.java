@@ -6,35 +6,35 @@ public class AllGet {
     }
 
     public static void printType(byte x) {
-        System.out.println(x);
+        System.out.println("byte");
     }
 
     public static void printType(boolean x) {
-        System.out.println(x);
+        System.out.println("boolean");
     }
 
     public static void printType(double x) {
-        System.out.println(x);
+        System.out.println("double");
     }
 
     public static void printType(int x) {
-        System.out.println(x);
+        System.out.println("int");
     }
 
     public static void printType(char x) {
-        System.out.println(x);
+        System.out.println("char");
     }
 
     public static void printType(long x) {
-        System.out.println(x);
+        System.out.println("long");
     }
 
     public static void printType(float x) {
-        System.out.println(x);
+        System.out.println("float");
     }
 
     public static void printType(short x) {
-        System.out.println(x);
+        System.out.println("short");
     }
 
     public static void printType(Object x) {

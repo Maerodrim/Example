@@ -10,10 +10,10 @@ public class AllGetTest {
     public void testPrintType() {
         AllGet.printType(5);
         AllGet.printType(5.);
-        AllGet.printType("string");
+        AllGet.printType((String)"stri");
         AllGet.printType('c');
         AllGet.printType(true);
-        AllGet.printType(763098);
-        AllGet.printType(5);
+        AllGet.printType((long) 763098);
+        AllGet.printType((float) 5);
     }
 }
