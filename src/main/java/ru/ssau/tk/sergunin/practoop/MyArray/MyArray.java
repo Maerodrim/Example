@@ -114,10 +114,25 @@ public class MyArray {
     }
 
     public static double[] GeneratorDeliteli(int count) {
-        double[] zValues = new double[1];
+        double[] zValues = new double[0];
         int j = 0;
         for (int i = 1; i <= count; i++) {
             if (count % i == 0) {
+                double[] xValues = new double[zValues.length + 1];
+                System.arraycopy(zValues, 0, xValues, 0, zValues.length);
+                xValues[j] = i;
+                zValues = xValues;
+                j++;
+            }
+        }
+        return zValues;
+    }
+
+    public static double[] GeneratorProstoe(int count) {
+        double[] zValues = new double[0];
+        int j = 0;
+        for (int i = 3; i <= count; i++) {
+            if (MyArray.GeneratorDeliteli(i).length == 2) {
                 double[] xValues = new double[zValues.length + 1];
                 System.arraycopy(zValues, 0, xValues, 0, zValues.length);
                 xValues[j] = i;

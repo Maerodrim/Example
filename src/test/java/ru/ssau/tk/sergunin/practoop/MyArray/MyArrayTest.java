@@ -110,7 +110,15 @@ public class MyArrayTest {
     public void testGeneratorDeliteli() {
         yValues = MyArray.GeneratorDeliteli(3);
 
-            assertEquals(yValues[0], 1, 0.0001);
-            assertEquals(yValues[1], 3, 0.0001);
+        assertEquals(yValues[0], 1, 0.0001);
+        assertEquals(yValues[1], 3, 0.0001);
+        assertEquals(yValues.length, 2, 0.0001);
+    }
+
+    @Test
+    public void testGeneratorProstoe() {
+        yValues = MyArray.GeneratorProstoe(20);
+        assertEquals(yValues[0], 3, 0.0001);
+        assertEquals(yValues.length, 7, 0.0001);
     }
 }
