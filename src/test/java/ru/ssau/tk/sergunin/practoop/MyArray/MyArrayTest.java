@@ -105,4 +105,12 @@ public class MyArrayTest {
             assertEquals(yValues[i], 5 * Math.pow(5, i), 0.0001);
         }
     }
+
+    @Test
+    public void testGeneratorDeliteli() {
+        yValues = MyArray.GeneratorDeliteli(3);
+
+            assertEquals(yValues[0], 1, 0.0001);
+            assertEquals(yValues[1], 3, 0.0001);
+    }
 }
