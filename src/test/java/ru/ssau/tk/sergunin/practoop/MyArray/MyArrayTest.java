@@ -40,6 +40,7 @@ public class MyArrayTest {
         }
     }
 
+
     @Test
     public void testGeneratorDecreasingEven() {
         yValues = MyArray.GeneratorDecreasingEven(count);
@@ -70,5 +71,22 @@ public class MyArrayTest {
 
         assertEquals(yValues[0], 2, 0.0001);
         assertEquals(yValues[1], -2, 0.0001);
+    }
+
+    @Test
+    public void testGeneratorNatMod3() {
+        yValues = MyArray.GeneratorNatMod3(count);
+        int j=1;
+        for (int i = 0; i < count; i++) {
+            while (j == j) {
+                if (j % 3 == 0) {
+                    assertEquals(yValues[i], j,0.0001);
+                    j++;
+                    break;
+                } else {
+                    j++;
+                }
+            }
+        }
     }
 }
