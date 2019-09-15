@@ -7,7 +7,7 @@ public class MyArray {
         ;
     }
 
-    public double[] GeneratorNewArray(int count) {
+    public static double[] GeneratorNewArray(int count) {
         double[] yValues = new double[count];
         for (int i = 0; i < (count); i++) {
             yValues[i] = 0;
@@ -15,7 +15,7 @@ public class MyArray {
         return yValues;
     }
 
-    public double[] GeneratorTwoOneTwo(int count) {
+    public static double[] GeneratorTwoOneTwo(int count) {
         double[] yValues = new double[count];
         if (count > 0) {
             yValues[0] = 2;
@@ -27,7 +27,7 @@ public class MyArray {
         return yValues;
     }
 
-    public double[] GeneratorSqr(int count) {
+    public static double[] GeneratorSqr(int count) {
         double[] yValues = new double[count];
         for (int i = 0; i < count; i++) {
             yValues[i] = i * i;
@@ -35,7 +35,7 @@ public class MyArray {
         return yValues;
     }
 
-    public double[] GeneratorOdd(int count) {
+    public static double[] GeneratorOdd(int count) {
         double[] yValues = new double[count];
         for (int i = 0; i < count; i++) {
             yValues[i] = (2 * i + 1);
@@ -43,7 +43,7 @@ public class MyArray {
         return yValues;
     }
 
-    public double[] GeneratorDecreasingEven(int count) {
+    public static double[] GeneratorDecreasingEven(int count) {
         double[] yValues = new double[count];
         for (int i = 0; i < count; i++) {
             yValues[i] = (2 * (count - i));
@@ -51,7 +51,7 @@ public class MyArray {
         return yValues;
     }
 
-    public double[] GeneratorFibonacciNumbers(int count) {
+    public static double[] GeneratorFibonacciNumbers(int count) {
         double[] yValues = new double[count];
         if (count > 0) {
             yValues[0] = 1;
