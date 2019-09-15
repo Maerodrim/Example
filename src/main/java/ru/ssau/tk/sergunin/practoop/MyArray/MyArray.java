@@ -142,5 +142,18 @@ public class MyArray {
         }
         return zValues;
     }
+
+    public static double[] GeneratorLestnica(int count) {
+        double[] zValues = new double[count];
+        for (int i = 0; i < count; i++) {
+            if ((double)i <= (double)(count / 2)) {
+                if ((double)i == (double)(count / 2)) {
+                zValues[i] = i;} else {zValues[i] = i+1;}
+            } else {
+                zValues[i] = zValues[i-1]-1;
+            }
+        }
+        return zValues;
+    }
 }
 

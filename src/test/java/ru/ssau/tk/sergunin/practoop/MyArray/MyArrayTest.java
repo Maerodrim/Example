@@ -121,4 +121,12 @@ public class MyArrayTest {
         assertEquals(yValues[0], 3, 0.0001);
         assertEquals(yValues.length, 7, 0.0001);
     }
+
+    @Test
+    public void testGeneratorLestnica() {
+        yValues = MyArray.GeneratorLestnica(20);
+        assertEquals(yValues[0], 1, 0.0001);
+        assertEquals(yValues[19], 1, 0.0001);
+        assertEquals(yValues.length, 20, 0.0001);
+    }
 }
