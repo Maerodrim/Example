@@ -89,4 +89,12 @@ public class MyArrayTest {
             }
         }
     }
+
+    @Test
+    public void testGeneratorProgressAriF() {
+        yValues = MyArray.GeneratorProgressAriF(count,5,5);
+        for (int i = 0; i < count; i++) {
+            assertEquals(yValues[i], (5+5*i), 0.0001);
+        }
+    }
 }

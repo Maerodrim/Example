@@ -96,4 +96,11 @@ public class MyArray {
             return yValues;
         }
     }
+    public static double[] GeneratorProgressAriF(int count,int b,int q) {
+        double[] yValues = new double[count];
+        for (int i = 0; i < count; i++) {
+            yValues[i] = b+i*q;
+        }
+        return yValues;
+    }
 }
