@@ -96,17 +96,19 @@ public class MyArray {
             return yValues;
         }
     }
-    public static double[] GeneratorProgressAriF(int count,int b,int q) {
+
+    public static double[] GeneratorProgressAriF(int count, int b, int q) {
         double[] yValues = new double[count];
         for (int i = 0; i < count; i++) {
-            yValues[i] = b+i*q;
+            yValues[i] = b + i * q;
         }
         return yValues;
     }
-    public static double[] GeneratorProgressGeom(int count,int b,int q) {
+
+    public static double[] GeneratorProgressGeom(int count, int b, int q) {
         double[] yValues = new double[count];
         for (int i = 0; i < count; i++) {
-            yValues[i] = b*Math.pow(q,i);
+            yValues[i] = b * Math.pow(q, i);
         }
         return yValues;
     }
