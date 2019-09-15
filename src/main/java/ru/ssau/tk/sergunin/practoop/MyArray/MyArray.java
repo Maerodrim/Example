@@ -66,4 +66,17 @@ public class MyArray {
         }
         return yValues;
     }
+
+    public static double[] GeneratorQuadraticEquation(double a, double b, double c) {
+        if (a > 0) {
+            double[] yValues = new double[2];
+            yValues[0] = -b / (2 * a) + Math.pow((Math.pow(b, 2) - 4 * a * c) / (4 * a * a),1./2);
+            yValues[1] = -b / (2 * a) - Math.pow((Math.pow(b, 2) - 4 * a * c) / (4 * a * a),1./2);
+            return yValues;
+        } else {
+            double[] yValues = new double[1];
+            yValues[0] = (-c / b);
+            return yValues;
+        }
+    }
 }

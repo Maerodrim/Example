@@ -63,4 +63,12 @@ public class MyArrayTest {
             }
         }
     }
+
+    @Test
+    public void testGeneratorQuadraticEquation() {
+        yValues = MyArray.GeneratorQuadraticEquation(1, 0, -4);
+
+        assertEquals(yValues[0], 2, 0.0001);
+        assertEquals(yValues[1], -2, 0.0001);
+    }
 }
