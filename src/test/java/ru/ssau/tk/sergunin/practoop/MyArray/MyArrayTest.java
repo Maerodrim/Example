@@ -129,4 +129,13 @@ public class MyArrayTest {
         assertEquals(yValues[19], 1, 0.0001);
         assertEquals(yValues.length, 20, 0.0001);
     }
+
+    @Test
+    public void testGeneratorMinus() {
+        yValues = MyArray.GeneratorLestnica(20);
+        MyArray.GeneratorMinus(yValues);
+        assertEquals(yValues[0], -1, 0.0001);
+        assertEquals(yValues[19], -1, 0.0001);
+        assertEquals(yValues.length, 20, 0.0001);
+    }
 }
