@@ -164,5 +164,11 @@ public class MyArray {
             zValues[i] = -zValues[i];
         }
     }
+    public static boolean GeneratorProverkaNaChislo(double[] zValues,double x) {
+        for (int i = 0; i < zValues.length; i++) {
+            if(zValues[i]==x){return true;}
+        }
+        return false;
+    }
 }
 

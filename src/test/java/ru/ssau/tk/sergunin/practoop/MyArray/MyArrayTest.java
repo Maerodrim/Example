@@ -138,4 +138,12 @@ public class MyArrayTest {
         assertEquals(yValues[19], -1, 0.0001);
         assertEquals(yValues.length, 20, 0.0001);
     }
+
+    @Test
+    public void testGeneratorProverkaNaChislo() {
+        yValues = MyArray.GeneratorLestnica(10);
+        MyArray.GeneratorProverkaNaChislo(yValues,5);
+        assertFalse(MyArray.GeneratorProverkaNaChislo(yValues,9));
+        assertTrue(MyArray.GeneratorProverkaNaChislo(yValues,5));
+    }
 }
