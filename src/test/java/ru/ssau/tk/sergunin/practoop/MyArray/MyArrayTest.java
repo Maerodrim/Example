@@ -40,7 +40,6 @@ public class MyArrayTest {
         }
     }
 
-
     @Test
     public void testGeneratorDecreasingEven() {
         yValues = MyArray.GeneratorDecreasingEven(count);
@@ -142,8 +141,16 @@ public class MyArrayTest {
     @Test
     public void testGeneratorProverkaNaChislo() {
         yValues = MyArray.GeneratorLestnica(10);
-        MyArray.GeneratorProverkaNaChislo(yValues,5);
-        assertFalse(MyArray.GeneratorProverkaNaChislo(yValues,9));
-        assertTrue(MyArray.GeneratorProverkaNaChislo(yValues,5));
+        MyArray.GeneratorProverkaNaChislo(yValues, 5);
+        assertFalse(MyArray.GeneratorProverkaNaChislo(yValues, 9));
+        assertTrue(MyArray.GeneratorProverkaNaChislo(yValues, 5));
+    }
+
+    @Test
+    public void testGeneratorIntNull() {
+        Integer[] yValues = new Integer[]{4, 6, 3, 6, null};
+        assertTrue(MyArray.GeneratorIntNull(yValues));
+        Integer[] zValues = new Integer[]{4, 6, 3, 6, 7};
+        assertFalse(MyArray.GeneratorIntNull(zValues));
     }
 }

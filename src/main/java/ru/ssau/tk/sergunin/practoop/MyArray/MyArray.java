@@ -3,10 +3,6 @@ package ru.ssau.tk.sergunin.practoop.MyArray;
 import java.util.Arrays;
 
 public class MyArray {
-    private MyArray() {
-        ;
-    }
-
     public static double[] GeneratorNewArray(int count) {
         double[] yValues = new double[count];
         for (int i = 0; i < (count); i++) {
@@ -164,9 +160,20 @@ public class MyArray {
             zValues[i] = -zValues[i];
         }
     }
-    public static boolean GeneratorProverkaNaChislo(double[] zValues,double x) {
+
+    public static boolean GeneratorProverkaNaChislo(double[] zValues, double x) {
         for (int i = 0; i < zValues.length; i++) {
-            if(zValues[i]==x){return true;}
+            if (zValues[i] == x) {
+                return true;
+            }
+        }
+        return false;
+    }
+    public static boolean GeneratorIntNull(Integer[] zValues) {
+        for (int i = 0; i < zValues.length; i++) {
+            if (zValues[i] == null) {
+                return true;
+            }
         }
         return false;
     }

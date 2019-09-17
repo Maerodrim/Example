@@ -41,7 +41,7 @@ public class AllGet {
         if (x == null) {
             System.out.println("null");
         } else {
-            x.getClass();
+            System.out.println(x.getClass().getSimpleName());
         }
     }
 
