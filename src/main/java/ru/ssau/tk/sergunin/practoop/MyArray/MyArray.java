@@ -288,6 +288,13 @@ public class MyArray {
         zValues[max_i] = min;
 
     }
+
+    public static void generatorBitMinus(int[] zValues) {
+        for (int i = 0; i < zValues.length; i++) {
+            zValues[i] = ~zValues[i];
+        }
+    }
+
 }
 
 

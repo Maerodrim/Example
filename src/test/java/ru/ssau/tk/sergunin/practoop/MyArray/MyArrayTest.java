@@ -212,4 +212,16 @@ public class MyArrayTest {
         MyArray.firstOnLast(zValues);
         assertEquals(zValues[0], 7, 0.00001);
     }
+
+    @Test
+    public void testGeneratorBitMinus() {
+        int[] yValues = new int[]{9, 1, 3, 5, 1};
+        MyArray.generatorBitMinus(yValues);
+        assertEquals(yValues[0], -10, 0.00001);
+        int[] zValues = new int[]{1, 6, 3, 6, 7};
+        MyArray.generatorBitMinus(zValues);
+        assertEquals(zValues[0], -2, 0.00001);
+        MyArray.generatorBitMinus(zValues);
+        assertEquals(zValues[0], 1, 0.00001);
+    }
 }
