@@ -153,4 +153,11 @@ public class MyArrayTest {
         Integer[] zValues = new Integer[]{4, 6, 3, 6, 7};
         assertFalse(MyArray.GeneratorIntNull(zValues));
     }
+    @Test
+    public void testCountChet() {
+        Integer[] yValues = new Integer[]{9, 1, 3, 5, 7};
+        assertEquals(MyArray.CountChet(yValues),0,0.00001);
+        Integer[] zValues = new Integer[]{4, 6, 3, 6, 7};
+        assertEquals(MyArray.CountChet(zValues),3,0.00001);
+    }
 }

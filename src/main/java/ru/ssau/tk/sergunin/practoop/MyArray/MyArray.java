@@ -169,6 +169,7 @@ public class MyArray {
         }
         return false;
     }
+
     public static boolean GeneratorIntNull(Integer[] zValues) {
         for (int i = 0; i < zValues.length; i++) {
             if (zValues[i] == null) {
@@ -176,6 +177,16 @@ public class MyArray {
             }
         }
         return false;
+    }
+
+    public static int CountChet(Integer[] zValues) {
+        int j = 0;
+        for (int i = 0; i < zValues.length; i++) {
+            if (zValues[i] % 2 == 0) {
+                j++;
+            }
+        }
+        return j;
     }
 }
 
