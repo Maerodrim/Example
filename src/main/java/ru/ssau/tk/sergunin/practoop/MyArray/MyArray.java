@@ -252,11 +252,20 @@ public class MyArray {
         while (yValues[s][0] != null) {
             if (yValues[s][1] > max) {
                 max = yValues[s][1];
-                max_s=s;
+                max_s = s;
             }
             s++;
         }
         return yValues[max_s][0];
+    }
+
+    public static int proverkaFirstVhod(double[] zValues, double x) {
+        for (int i = 0; i < zValues.length; i++) {
+            if (zValues[i] == x) {
+                return i;
+            }
+        }
+        return Integer.parseInt(null);
     }
 }
 

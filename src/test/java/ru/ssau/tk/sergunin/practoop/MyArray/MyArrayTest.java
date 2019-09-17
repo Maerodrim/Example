@@ -194,4 +194,12 @@ public class MyArrayTest {
         assertEquals(MyArray.sortCountMax(zValues), 6, 0.00001);
 
     }
+
+    @Test
+    public void testProverkaFirstVhod() {
+        double[] yValues = new double[]{9, 1, 3, 5, 1};
+        assertEquals(MyArray.proverkaFirstVhod(yValues, 3), 2, 0.00001);
+        double[] zValues = new double[]{1, 6, 3, 6, 7};
+        assertEquals(MyArray.proverkaFirstVhod(zValues, 1), 0, 0.00001);
+    }
 }
