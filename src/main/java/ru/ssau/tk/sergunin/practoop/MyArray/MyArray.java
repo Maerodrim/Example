@@ -201,5 +201,15 @@ public class MyArray {
         }
         return j;
     }
+
+    public static int SumCountChet(Integer[] zValues) {
+        int j = 0;
+        for (int i = 0; i < zValues.length; i++) {
+            if (i % 2 == 0) {
+                j += zValues[i];
+            }
+        }
+        return j;
+    }
 }
 

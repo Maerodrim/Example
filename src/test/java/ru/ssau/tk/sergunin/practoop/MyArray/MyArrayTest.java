@@ -169,4 +169,12 @@ public class MyArrayTest {
         Integer[] zValues = new Integer[]{};
         assertNull(MyArray.CountMax(zValues));
     }
+
+    @Test
+    public void testSumCountChet() {
+        Integer[] yValues = new Integer[]{9, 1, 3, 5, 7};
+        assertEquals(MyArray.SumCountChet(yValues), 19, 0.00001);
+        Integer[] zValues = new Integer[]{4, 6, 3, 6, 7};
+        assertEquals(MyArray.SumCountChet(zValues), 14, 0.00001);
+    }
 }
