@@ -160,4 +160,12 @@ public class MyArrayTest {
         Integer[] zValues = new Integer[]{4, 6, 3, 6, 7};
         assertEquals(MyArray.CountChet(zValues),3,0.00001);
     }
+
+    @Test
+    public void testCountMax() {
+        Integer[] yValues = new Integer[]{9, 1, 3, 5, 7};
+        assertEquals(MyArray.CountMax(yValues),9,0.00001);
+        Integer[] zValues = new Integer[]{};
+        assertNull(MyArray.CountMax(zValues));
+    }
 }

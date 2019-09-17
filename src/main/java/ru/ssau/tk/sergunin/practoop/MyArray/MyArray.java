@@ -188,5 +188,17 @@ public class MyArray {
         }
         return j;
     }
+    public static Integer CountMax(Integer[] zValues) {
+        if (zValues.length == 0) {
+            return null;
+        }
+        Integer j = Integer.MIN_VALUE;
+        for (int i = 0; i < zValues.length; i++) {
+            if (zValues[i] > j) {
+                j=zValues[i];
+            }
+        }
+        return j;
+    }
 }
 
