@@ -177,4 +177,12 @@ public class MyArrayTest {
         Integer[] zValues = new Integer[]{4, 6, 3, 6, 7};
         assertEquals(MyArray.SumCountChet(zValues), 14, 0.00001);
     }
+
+    @Test
+    public void testBooleanCountChet() {
+        Integer[] yValues = new Integer[]{9, 1, 3, 5, 1};
+        assertFalse(MyArray.BooleanCountChet(yValues));
+        Integer[] zValues = new Integer[]{1, 6, 3, 6, 7};
+        assertTrue(MyArray.BooleanCountChet(zValues));
+    }
 }

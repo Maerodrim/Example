@@ -211,5 +211,22 @@ public class MyArray {
         }
         return j;
     }
+
+    public static boolean BooleanCountChet(Integer[] zValues) {
+        int j = 0;
+        int m = 0;
+        for (int i = 0; i < zValues.length; i++) {
+            if (i % zValues[0] == 0) {
+                j++;
+            }
+            if (i % zValues[zValues.length - 1] == 0) {
+                m++;
+            }
+        }
+        if (j > m) {
+            return true;
+        }
+        return false;
+    }
 }
 
