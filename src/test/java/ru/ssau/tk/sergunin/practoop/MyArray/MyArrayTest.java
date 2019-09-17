@@ -202,4 +202,14 @@ public class MyArrayTest {
         double[] zValues = new double[]{1, 6, 3, 6, 7};
         assertEquals(MyArray.proverkaFirstVhod(zValues, 1), 0, 0.00001);
     }
+
+    @Test
+    public void testFirstOnLast() {
+        double[] yValues = new double[]{9, 1, 3, 5, 1};
+        MyArray.firstOnLast(yValues);
+        assertEquals(yValues[0], 1, 0.00001);
+        double[] zValues = new double[]{1, 6, 3, 6, 7};
+        MyArray.firstOnLast(zValues);
+        assertEquals(zValues[0], 7, 0.00001);
+    }
 }

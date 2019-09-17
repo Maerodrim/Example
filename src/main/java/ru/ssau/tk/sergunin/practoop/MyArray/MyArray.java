@@ -267,6 +267,27 @@ public class MyArray {
         }
         return Integer.parseInt(null);
     }
+
+
+    public static void firstOnLast(double[] zValues) {
+        double max = Double.MIN_VALUE;
+        int max_i = 0;
+        double min = Double.MAX_VALUE;
+        int min_i = 0;
+        for (int i = 0; i < zValues.length; i++) {
+            if (zValues[i] > max) {
+                max = zValues[i];
+                max_i = i;
+            }
+            if (zValues[i] < min) {
+                min = zValues[i];
+                min_i = i;
+            }
+        }
+        zValues[min_i] = max;
+        zValues[max_i] = min;
+
+    }
 }
 
 
