@@ -10,7 +10,7 @@ public class MyArrayTest {
 
     @Test
     public void testGeneratorNewArray() {
-        yValues = MyArray.GeneratorNewArray(count);
+        yValues = MyArray.generatorNewArray(count);
         for (int i = 0; i < count; i++) {
             assertEquals(yValues[i], 0, 0.0001);
         }
@@ -18,7 +18,7 @@ public class MyArrayTest {
 
     @Test
     public void testGeneratorTwoOneTwo() {
-        yValues = MyArray.GeneratorTwoOneTwo(count);
+        yValues = MyArray.generatorTwoOneTwo(count);
         for (int i = 1; i < count - 1; i++) {
             assertEquals(yValues[i], 1, 0.0001);
         }
@@ -26,7 +26,7 @@ public class MyArrayTest {
 
     @Test
     public void testGeneratorSqr() {
-        yValues = MyArray.GeneratorSqr(count);
+        yValues = MyArray.generatorSqr(count);
         for (int i = 0; i < count; i++) {
             assertEquals(yValues[i], i * i, 0.0001);
         }
@@ -34,7 +34,7 @@ public class MyArrayTest {
 
     @Test
     public void testGeneratorOdd() {
-        yValues = MyArray.GeneratorOdd(count);
+        yValues = MyArray.generatorOdd(count);
         for (int i = 0; i < count; i++) {
             assertEquals(yValues[i], (2 * i + 1), 0.0001);
         }
@@ -42,7 +42,7 @@ public class MyArrayTest {
 
     @Test
     public void testGeneratorDecreasingEven() {
-        yValues = MyArray.GeneratorDecreasingEven(count);
+        yValues = MyArray.generatorDecreasingEven(count);
         for (int i = 0; i < count; i++) {
             assertEquals(yValues[i], (2 * (count - i)), 0.0001);
         }
@@ -50,7 +50,7 @@ public class MyArrayTest {
 
     @Test
     public void testGeneratorFibonacciNumbers() {
-        yValues = MyArray.GeneratorFibonacciNumbers(count);
+        yValues = MyArray.generatorFibonacciNumbers(count);
         if (count > 0) {
             assertEquals(yValues[0], 1, 0.0001);
             if (count > 1) {
@@ -66,7 +66,7 @@ public class MyArrayTest {
 
     @Test
     public void testGeneratorQuadraticEquation() {
-        yValues = MyArray.GeneratorQuadraticEquation(1, 0, -4);
+        yValues = MyArray.generatorQuadraticEquation(1, 0, -4);
 
         assertEquals(yValues[0], 2, 0.0001);
         assertEquals(yValues[1], -2, 0.0001);
@@ -74,7 +74,7 @@ public class MyArrayTest {
 
     @Test
     public void testGeneratorNatMod3() {
-        yValues = MyArray.GeneratorNatMod3(count);
+        yValues = MyArray.generatorNatMod3(count);
         int j = 1;
         for (int i = 0; i < count; i++) {
             while (j == j) {
@@ -91,7 +91,7 @@ public class MyArrayTest {
 
     @Test
     public void testGeneratorProgressAriF() {
-        yValues = MyArray.GeneratorProgressAriF(count, 5, 5);
+        yValues = MyArray.generatorProgressAriF(count, 5, 5);
         for (int i = 0; i < count; i++) {
             assertEquals(yValues[i], (5 + 5 * i), 0.0001);
         }
@@ -99,7 +99,7 @@ public class MyArrayTest {
 
     @Test
     public void testGeneratorProgressGeom() {
-        yValues = MyArray.GeneratorProgressGeom(count, 5, 5);
+        yValues = MyArray.generatorProgressGeom(count, 5, 5);
         for (int i = 0; i < count; i++) {
             assertEquals(yValues[i], 5 * Math.pow(5, i), 0.0001);
         }
@@ -107,7 +107,7 @@ public class MyArrayTest {
 
     @Test
     public void testGeneratorDeliteli() {
-        yValues = MyArray.GeneratorDeliteli(3);
+        yValues = MyArray.generatorDeliteli(3);
 
         assertEquals(yValues[0], 1, 0.0001);
         assertEquals(yValues[1], 3, 0.0001);
@@ -116,14 +116,14 @@ public class MyArrayTest {
 
     @Test
     public void testGeneratorProstoe() {
-        yValues = MyArray.GeneratorProstoe(20);
+        yValues = MyArray.generatorProstoe(20);
         assertEquals(yValues[0], 3, 0.0001);
         assertEquals(yValues.length, 7, 0.0001);
     }
 
     @Test
     public void testGeneratorLestnica() {
-        yValues = MyArray.GeneratorLestnica(20);
+        yValues = MyArray.generatorLestnica(20);
         assertEquals(yValues[0], 1, 0.0001);
         assertEquals(yValues[19], 1, 0.0001);
         assertEquals(yValues.length, 20, 0.0001);
@@ -131,8 +131,8 @@ public class MyArrayTest {
 
     @Test
     public void testGeneratorMinus() {
-        yValues = MyArray.GeneratorLestnica(20);
-        MyArray.GeneratorMinus(yValues);
+        yValues = MyArray.generatorLestnica(20);
+        MyArray.generatorMinus(yValues);
         assertEquals(yValues[0], -1, 0.0001);
         assertEquals(yValues[19], -1, 0.0001);
         assertEquals(yValues.length, 20, 0.0001);
@@ -140,49 +140,58 @@ public class MyArrayTest {
 
     @Test
     public void testGeneratorProverkaNaChislo() {
-        yValues = MyArray.GeneratorLestnica(10);
-        MyArray.GeneratorProverkaNaChislo(yValues, 5);
-        assertFalse(MyArray.GeneratorProverkaNaChislo(yValues, 9));
-        assertTrue(MyArray.GeneratorProverkaNaChislo(yValues, 5));
+        yValues = MyArray.generatorLestnica(10);
+        MyArray.generatorProverkaNaChislo(yValues, 5);
+        assertFalse(MyArray.generatorProverkaNaChislo(yValues, 9));
+        assertTrue(MyArray.generatorProverkaNaChislo(yValues, 5));
     }
 
     @Test
     public void testGeneratorIntNull() {
         Integer[] yValues = new Integer[]{4, 6, 3, 6, null};
-        assertTrue(MyArray.GeneratorIntNull(yValues));
+        assertTrue(MyArray.generatorIntNull(yValues));
         Integer[] zValues = new Integer[]{4, 6, 3, 6, 7};
-        assertFalse(MyArray.GeneratorIntNull(zValues));
+        assertFalse(MyArray.generatorIntNull(zValues));
     }
 
     @Test
     public void testCountChet() {
         Integer[] yValues = new Integer[]{9, 1, 3, 5, 7};
-        assertEquals(MyArray.CountChet(yValues), 0, 0.00001);
+        assertEquals(MyArray.countChet(yValues), 0, 0.00001);
         Integer[] zValues = new Integer[]{4, 6, 3, 6, 7};
-        assertEquals(MyArray.CountChet(zValues), 3, 0.00001);
+        assertEquals(MyArray.countChet(zValues), 3, 0.00001);
     }
 
     @Test
     public void testCountMax() {
         Integer[] yValues = new Integer[]{9, 1, 3, 5, 7};
-        assertEquals(MyArray.CountMax(yValues), 9, 0.00001);
+        assertEquals(MyArray.countMax(yValues), 9, 0.00001);
         Integer[] zValues = new Integer[]{};
-        assertNull(MyArray.CountMax(zValues));
+        assertNull(MyArray.countMax(zValues));
     }
 
     @Test
     public void testSumCountChet() {
         Integer[] yValues = new Integer[]{9, 1, 3, 5, 7};
-        assertEquals(MyArray.SumCountChet(yValues), 19, 0.00001);
+        assertEquals(MyArray.sumCountChet(yValues), 19, 0.00001);
         Integer[] zValues = new Integer[]{4, 6, 3, 6, 7};
-        assertEquals(MyArray.SumCountChet(zValues), 14, 0.00001);
+        assertEquals(MyArray.sumCountChet(zValues), 14, 0.00001);
     }
 
     @Test
     public void testBooleanCountChet() {
         Integer[] yValues = new Integer[]{9, 1, 3, 5, 1};
-        assertFalse(MyArray.BooleanCountChet(yValues));
+        assertFalse(MyArray.booleanCountChet(yValues));
         Integer[] zValues = new Integer[]{1, 6, 3, 6, 7};
-        assertTrue(MyArray.BooleanCountChet(zValues));
+        assertTrue(MyArray.booleanCountChet(zValues));
+    }
+
+    @Test
+    public void testSortCountMax() {
+        Integer[] yValues = new Integer[]{9, 1, 3, 5, 1};
+        assertEquals(MyArray.sortCountMax(yValues), 1, 0.00001);
+        Integer[] zValues = new Integer[]{1, 6, 3, 6, 7};
+        assertEquals(MyArray.sortCountMax(zValues), 6, 0.00001);
+
     }
 }

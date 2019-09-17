@@ -3,7 +3,7 @@ package ru.ssau.tk.sergunin.practoop.MyArray;
 import java.util.Arrays;
 
 public class MyArray {
-    public static double[] GeneratorNewArray(int count) {
+    public static double[] generatorNewArray(int count) {
         double[] yValues = new double[count];
         for (int i = 0; i < (count); i++) {
             yValues[i] = 0;
@@ -11,7 +11,7 @@ public class MyArray {
         return yValues;
     }
 
-    public static double[] GeneratorTwoOneTwo(int count) {
+    public static double[] generatorTwoOneTwo(int count) {
         double[] yValues = new double[count];
         if (count > 0) {
             yValues[0] = 2;
@@ -23,7 +23,7 @@ public class MyArray {
         return yValues;
     }
 
-    public static double[] GeneratorSqr(int count) {
+    public static double[] generatorSqr(int count) {
         double[] yValues = new double[count];
         for (int i = 0; i < count; i++) {
             yValues[i] = i * i;
@@ -31,7 +31,7 @@ public class MyArray {
         return yValues;
     }
 
-    public static double[] GeneratorOdd(int count) {
+    public static double[] generatorOdd(int count) {
         double[] yValues = new double[count];
         for (int i = 0; i < count; i++) {
             yValues[i] = (2 * i + 1);
@@ -39,7 +39,7 @@ public class MyArray {
         return yValues;
     }
 
-    public static double[] GeneratorNatMod3(int count) {
+    public static double[] generatorNatMod3(int count) {
         double[] yValues = new double[count];
         int j = 1;
         for (int i = 0; i < count; i++) {
@@ -56,7 +56,7 @@ public class MyArray {
         return yValues;
     }
 
-    public static double[] GeneratorDecreasingEven(int count) {
+    public static double[] generatorDecreasingEven(int count) {
         double[] yValues = new double[count];
         for (int i = 0; i < count; i++) {
             yValues[i] = (2 * (count - i));
@@ -64,7 +64,7 @@ public class MyArray {
         return yValues;
     }
 
-    public static double[] GeneratorFibonacciNumbers(int count) {
+    public static double[] generatorFibonacciNumbers(int count) {
         double[] yValues = new double[count];
         if (count > 0) {
             yValues[0] = 1;
@@ -80,7 +80,7 @@ public class MyArray {
         return yValues;
     }
 
-    public static double[] GeneratorQuadraticEquation(double a, double b, double c) {
+    public static double[] generatorQuadraticEquation(double a, double b, double c) {
         if (a > 0) {
             double[] yValues = new double[2];
             yValues[0] = -b / (2 * a) + Math.pow((Math.pow(b, 2) - 4 * a * c) / (4 * a * a), 1. / 2);
@@ -93,7 +93,7 @@ public class MyArray {
         }
     }
 
-    public static double[] GeneratorProgressAriF(int count, int b, int q) {
+    public static double[] generatorProgressAriF(int count, int b, int q) {
         double[] yValues = new double[count];
         for (int i = 0; i < count; i++) {
             yValues[i] = b + i * q;
@@ -101,7 +101,7 @@ public class MyArray {
         return yValues;
     }
 
-    public static double[] GeneratorProgressGeom(int count, int b, int q) {
+    public static double[] generatorProgressGeom(int count, int b, int q) {
         double[] yValues = new double[count];
         for (int i = 0; i < count; i++) {
             yValues[i] = b * Math.pow(q, i);
@@ -109,7 +109,7 @@ public class MyArray {
         return yValues;
     }
 
-    public static double[] GeneratorDeliteli(int count) {
+    public static double[] generatorDeliteli(int count) {
         double[] zValues = new double[0];
         int j = 0;
         for (int i = 1; i <= count; i++) {
@@ -124,11 +124,11 @@ public class MyArray {
         return zValues;
     }
 
-    public static double[] GeneratorProstoe(int count) {
+    public static double[] generatorProstoe(int count) {
         double[] zValues = new double[0];
         int j = 0;
         for (int i = 3; i <= count; i++) {
-            if (MyArray.GeneratorDeliteli(i).length == 2) {
+            if (MyArray.generatorDeliteli(i).length == 2) {
                 double[] xValues = new double[zValues.length + 1];
                 System.arraycopy(zValues, 0, xValues, 0, zValues.length);
                 xValues[j] = i;
@@ -139,7 +139,7 @@ public class MyArray {
         return zValues;
     }
 
-    public static double[] GeneratorLestnica(int count) {
+    public static double[] generatorLestnica(int count) {
         double[] zValues = new double[count];
         for (int i = 0; i < count; i++) {
             if ((double) i <= (double) (count / 2)) {
@@ -155,13 +155,13 @@ public class MyArray {
         return zValues;
     }
 
-    public static void GeneratorMinus(double[] zValues) {
+    public static void generatorMinus(double[] zValues) {
         for (int i = 0; i < zValues.length; i++) {
             zValues[i] = -zValues[i];
         }
     }
 
-    public static boolean GeneratorProverkaNaChislo(double[] zValues, double x) {
+    public static boolean generatorProverkaNaChislo(double[] zValues, double x) {
         for (int i = 0; i < zValues.length; i++) {
             if (zValues[i] == x) {
                 return true;
@@ -170,7 +170,7 @@ public class MyArray {
         return false;
     }
 
-    public static boolean GeneratorIntNull(Integer[] zValues) {
+    public static boolean generatorIntNull(Integer[] zValues) {
         for (int i = 0; i < zValues.length; i++) {
             if (zValues[i] == null) {
                 return true;
@@ -179,7 +179,7 @@ public class MyArray {
         return false;
     }
 
-    public static int CountChet(Integer[] zValues) {
+    public static int countChet(Integer[] zValues) {
         int j = 0;
         for (int i = 0; i < zValues.length; i++) {
             if (zValues[i] % 2 == 0) {
@@ -189,7 +189,7 @@ public class MyArray {
         return j;
     }
 
-    public static Integer CountMax(Integer[] zValues) {
+    public static Integer countMax(Integer[] zValues) {
         if (zValues.length == 0) {
             return null;
         }
@@ -202,7 +202,7 @@ public class MyArray {
         return j;
     }
 
-    public static int SumCountChet(Integer[] zValues) {
+    public static int sumCountChet(Integer[] zValues) {
         int j = 0;
         for (int i = 0; i < zValues.length; i++) {
             if (i % 2 == 0) {
@@ -212,7 +212,7 @@ public class MyArray {
         return j;
     }
 
-    public static boolean BooleanCountChet(Integer[] zValues) {
+    public static boolean booleanCountChet(Integer[] zValues) {
         int j = 0;
         int m = 0;
         for (int i = 0; i < zValues.length; i++) {
@@ -228,5 +228,36 @@ public class MyArray {
         }
         return false;
     }
+
+    public static int sortCountMax(Integer[] zValues) {
+        int j = 0;
+        int s = 0;
+        Integer[][] yValues = new Integer[zValues.length][2];
+        Arrays.sort(zValues);
+        yValues[s][0] = zValues[0];
+        for (int i = 1; i < zValues.length; i++) {
+            if (zValues[i] == zValues[i - 1]) {
+                j++;
+            } else {
+                yValues[s][1] = j + 1;
+                s++;
+                j = 0;
+                yValues[s][0] = zValues[i];
+                yValues[s][1] = 1;
+            }
+        }
+        s = 0;
+        int max = 0;
+        int max_s = 0;
+        while (yValues[s][0] != null) {
+            if (yValues[s][1] > max) {
+                max = yValues[s][1];
+                max_s=s;
+            }
+            s++;
+        }
+        return yValues[max_s][0];
+    }
 }
+
 
