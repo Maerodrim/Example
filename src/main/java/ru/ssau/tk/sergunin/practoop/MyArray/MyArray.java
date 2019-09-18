@@ -295,6 +295,13 @@ public class MyArray {
         }
     }
 
+    public static int[] generatorArrayBitMinus(int[] zValues) {
+        int[] yValues = new int[zValues.length];
+        for (int i = 0; i < zValues.length; i++) {
+            yValues[i] = ~zValues[i];
+        }
+        return yValues;
+    }
 }
 
 

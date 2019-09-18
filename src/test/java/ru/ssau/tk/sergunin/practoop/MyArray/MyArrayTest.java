@@ -224,4 +224,15 @@ public class MyArrayTest {
         MyArray.generatorBitMinus(zValues);
         assertEquals(zValues[0], 1, 0.00001);
     }
+
+    @Test
+    public void testGeneratorArrayBitMinus() {
+        int[] yValues = new int[]{9, 1, 3, 5, 1};
+        int[] zValues = new int[yValues.length];
+        zValues = MyArray.generatorArrayBitMinus(yValues);
+        assertEquals(yValues[0], 9, 0.00001);
+        assertEquals(zValues[0], -10, 0.00001);
+        zValues = MyArray.generatorArrayBitMinus(zValues);
+        assertEquals(zValues[0], 9, 0.00001);
+    }
 }
