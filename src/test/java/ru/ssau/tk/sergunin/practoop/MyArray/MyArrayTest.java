@@ -235,4 +235,15 @@ public class MyArrayTest {
         zValues = MyArray.generatorArrayBitMinus(zValues);
         assertEquals(zValues[0], 9, 0.00001);
     }
+
+    @Test
+    public void testGeneratorPlusTwo() {
+        int[] yValues = new int[]{9, 1, 3, 5, 1};
+        int[] zValues = MyArray.generatorPlusTwo(yValues);
+        assertEquals(zValues[0], 10, 0.00001);
+        assertEquals(zValues[2], 1, 0.00001);
+        int[] oValues = new int[]{9, 1, 3, 5, 1, 6};
+        int[] nValues = MyArray.generatorPlusTwo(oValues);
+        assertEquals(nValues[2], 7, 0.00001);
+    }
 }

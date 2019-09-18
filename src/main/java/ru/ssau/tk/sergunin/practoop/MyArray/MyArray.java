@@ -268,7 +268,6 @@ public class MyArray {
         return Integer.parseInt(null);
     }
 
-
     public static void firstOnLast(double[] zValues) {
         double max = Double.MIN_VALUE;
         int max_i = 0;
@@ -301,6 +300,23 @@ public class MyArray {
             yValues[i] = ~zValues[i];
         }
         return yValues;
+    }
+
+    public static int[] generatorPlusTwo(int[] zValues) {
+        if (zValues.length % 2 == 0) {
+            int[] yValues = new int[zValues.length / 2];
+            for (int i = 0; i < yValues.length; i++) {
+                yValues[i] = zValues[2 * i] + zValues[2 * i + 1];
+            }
+            return yValues;
+        } else {
+            int[] yValues = new int[zValues.length / 2 + 1];
+            for (int i = 0; i < yValues.length-1; i++) {
+                yValues[i] = zValues[2 * i] + zValues[2 * i + 1];
+            }
+            yValues[yValues.length-1] = zValues[zValues.length-1];
+            return yValues;
+        }
     }
 }
 
