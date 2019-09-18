@@ -311,12 +311,24 @@ public class MyArray {
             return yValues;
         } else {
             int[] yValues = new int[zValues.length / 2 + 1];
-            for (int i = 0; i < yValues.length-1; i++) {
+            for (int i = 0; i < yValues.length - 1; i++) {
                 yValues[i] = zValues[2 * i] + zValues[2 * i + 1];
             }
-            yValues[yValues.length-1] = zValues[zValues.length-1];
+            yValues[yValues.length - 1] = zValues[zValues.length - 1];
             return yValues;
         }
+    }
+
+    public static boolean[] booleanChet(Integer[] zValues) {
+        boolean[] yValues = new boolean[zValues.length];
+        for (int i = 0; i < zValues.length; i++) {
+            if (zValues[i] % 2 == 0) {
+                yValues[i] = true;
+            } else {
+                yValues[i] = false;
+            }
+        }
+        return yValues;
     }
 }
 

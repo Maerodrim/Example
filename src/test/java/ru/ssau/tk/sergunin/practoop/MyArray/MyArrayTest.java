@@ -246,4 +246,12 @@ public class MyArrayTest {
         int[] nValues = MyArray.generatorPlusTwo(oValues);
         assertEquals(nValues[2], 7, 0.00001);
     }
+
+    @Test
+    public void testBooleanChet() {
+        Integer[] yValues = new Integer[]{9, 1, 3, 5, 1};
+        assertFalse(MyArray.booleanChet(yValues)[0]);
+        Integer[] zValues = new Integer[]{1, 6, 3, 6, 7};
+        assertTrue(MyArray.booleanChet(zValues)[1]);
+    }
 }
