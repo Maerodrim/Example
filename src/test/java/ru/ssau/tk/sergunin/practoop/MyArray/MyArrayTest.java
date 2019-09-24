@@ -112,6 +112,13 @@ public class MyArrayTest {
         assertEquals(yValues[0], 1, 0.0001);
         assertEquals(yValues[1], 3, 0.0001);
         assertEquals(yValues.length, 2, 0.0001);
+        yValues = MyArray.generatorDeliteli(16);
+        assertEquals(yValues[0], 1, 0.0001);
+        assertEquals(yValues[1], 2, 0.0001);
+        assertEquals(yValues[2], 4, 0.0001);
+        assertEquals(yValues[3], 8, 0.0001);
+        assertEquals(yValues[4], 16, 0.0001);
+        assertEquals(yValues.length, 5, 0.0001);
     }
 
     @Test
@@ -253,5 +260,13 @@ public class MyArrayTest {
         assertFalse(MyArray.booleanChet(yValues)[0]);
         Integer[] zValues = new Integer[]{1, 6, 3, 6, 7};
         assertTrue(MyArray.booleanChet(zValues)[1]);
+    }
+
+    @Test
+    public void testLongToInt() {
+        assertEquals(MyArray.intToLong(MyArray.longToInt(4564576756485786786L)), 4564576756485786786L);
+        assertEquals(MyArray.intToLong(MyArray.longToInt(3657587654445334535L)), 3657587654445334535L);
+        assertEquals(MyArray.intToLong(MyArray.longToInt(-97945364587326487L)), -97945364587326487L);
+        assertEquals(MyArray.intToLong(MyArray.longToInt(-8837526543674545363L)), -8837526543674545363L);
     }
 }

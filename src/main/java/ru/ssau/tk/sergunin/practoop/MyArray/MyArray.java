@@ -330,6 +330,14 @@ public class MyArray {
         }
         return yValues;
     }
+
+    static int[] longToInt(long values) {
+        return new int[]{(int) (values >>> 32), (int) values};
+    }
+
+    static long intToLong(int[] values) {
+        return ((long) values[0] << 32) | ((long) values[1] & 4294967295L);
+    }
 }
 
 
