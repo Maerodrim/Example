@@ -338,6 +338,30 @@ public class MyArray {
     static long intToLong(int[] values) {
         return ((long) values[0] << 32) | ((long) values[1] & 4294967295L);
     }
+
+    static int[] getDanglingSequence(int count, int index) {
+        if (index >= count) {
+            throw new ArrayIndexOutOfBoundsException("Error index>count");
+        }
+        int[] result = new int[count];
+        for (int i = 0; i < count; i++) {
+            result[i + index - (i + index >= count ? count : 0)] = i + 1;
+        }
+        return result;
+    }
+
+    static int[][] getTriangleArray(int values) {
+        int[][] result = new int[values][];
+        int k = 1;
+        for (int i = 0; i < values; i++) {
+            result[i] = new int[values - i];
+            for (int j = 0; j < values - i; j++) {
+                result[i][j] = k;
+                k++;
+            }
+        }
+        return result;
+    }
 }
 
 

@@ -269,4 +269,19 @@ public class MyArrayTest {
         assertEquals(MyArray.intToLong(MyArray.longToInt(-97945364587326487L)), -97945364587326487L);
         assertEquals(MyArray.intToLong(MyArray.longToInt(-8837526543674545363L)), -8837526543674545363L);
     }
+
+    @Test
+    public void testGetDanglingSequence() {
+        assertEquals(MyArray.getDanglingSequence(5, 1), new int[]{5,1,2,3,4});
+        try {
+            MyArray.getDanglingSequence(5, 9);
+        } catch (ArrayIndexOutOfBoundsException e) {
+            assertEquals(e.getMessage(), "Error index>count");
+        }
+    }
+
+    @Test
+    public void testGetTriangleArray() {
+        assertEquals(MyArray.getTriangleArray(3), new int[][]{{1, 2, 3}, {4, 5}, {6}});
+    }
 }
