@@ -272,7 +272,7 @@ public class MyArrayTest {
 
     @Test
     public void testGetDanglingSequence() {
-        assertEquals(MyArray.getDanglingSequence(5, 1), new int[]{5,1,2,3,4});
+        assertEquals(MyArray.getDanglingSequence(5, 1), new int[]{5, 1, 2, 3, 4});
         try {
             MyArray.getDanglingSequence(5, 9);
         } catch (ArrayIndexOutOfBoundsException e) {
