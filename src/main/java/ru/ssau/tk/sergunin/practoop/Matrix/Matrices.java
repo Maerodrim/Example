@@ -92,19 +92,43 @@ public class Matrices {
         }
     }
 
-    public double matrixDeterminant(Matrix a) {
-        if (a.getN() == (a).getM() - 1) {
-            double c = 0;
-            Matrix buff=new Matrix(a.getN(),1);
-            for (int i = 0; i < a.getN(); i++) {
-                for (int j = 0; j < a.getM(); j++) {
-                    c += Math.pow(-1, i + j) * a.getMatrixValues(j, i);
+    public double matrixDeterminant(Matrix matrix) {
+        if (matrix.getN() == (matrix).getM() - 1) {
+            return Double.parseDouble(null);
+        }
+        double Det = 0;
+        if (matrix.getN() == 2) {
+            return matrix.getMatrixValues(1, 1) * matrix.getMatrixValues(2, 2) - matrix.getMatrixValues(1, 2) * matrix.getMatrixValues(2, 1);
+        } else {
+            int k;
+            for (int j = 0; j < matrix.getN(); j++) {
+                k = j % 2 == 0 ? 1 : -1;
+                Det += k * matrix.getMatrixValues(1, j + 1) * matrixDeterminant(getMinor(matrix, 0, j));
+            }
+        }
+        return Det;
+    }
+
+    private static Matrix getMinor(Matrix matrix, int row, int column) {
+        int minorLength = matrix.getN() - 1;
+        Matrix minor = new Matrix(minorLength, minorLength);
+        int a = 0;
+        int b;
+        for (int i = 0; i <= minorLength; i++) {
+            b = 0;
+            for (int j = 0; j <= minorLength; j++) {
+                if (i == row) {
+                    a = 1;
+                } else {
+                    if (j == column) {
+                        b = 1;
+                    } else {
+                        minor.setMatrixValues(i - a + 1, j - b + 1, matrix.getMatrixValues(i + 1, j + 1));
+                    }
                 }
             }
-            return c;
-        } else {
-            return Double.NaN;
         }
+        return minor;
     }
 }
 
