@@ -11,7 +11,7 @@ public class Matrix {
     }
 
     Matrix(Matrix matrix) {
-        this.matrix = new double[matrix.getN()][matrix.getM()];
+        this.matrix = matrix.matrix;
         this.n = matrix.getN();
         this.m = matrix.getM();
     }
