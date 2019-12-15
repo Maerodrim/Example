@@ -89,4 +89,8 @@ public class Strings {
         if (to > str.length()) to = str.length();
         return str.substring(from, to);
     }
+
+    public static void printObjectInConsole(Object obj) {
+        System.out.println(obj);
+    }
 }

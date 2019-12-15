@@ -2,6 +2,10 @@ package ru.ssau.tk.sergunin.practoop.Strings;
 
 import org.testng.Assert;
 import org.testng.annotations.Test;
+import ru.ssau.tk.sergunin.practoop.Matrix.Matrix;
+import ru.ssau.tk.sergunin.practoop.Person.Person;
+import ru.ssau.tk.sergunin.practoop.Point.NamedPoint;
+import ru.ssau.tk.sergunin.practoop.Point.Point;
 
 import static org.testng.Assert.*;
 
@@ -104,5 +108,19 @@ public class StringsTest {
         assertEquals(Strings.extendedSubstring(string, 2, 18), string.substring(2));
         assertEquals(Strings.extendedSubstring(string, -2, 14), string.substring(0, 14));
         assertEquals(Strings.extendedSubstring(string, 2, 14), string.substring(2, 14));
+    }
+    @Test
+    public void testDisplayTheObjectInConsole() {
+        Matrix matrix = new Matrix(2, 2);
+        matrix.setMatrixValues(0, 1, 1);
+        matrix.setMatrixValues(0, 0, 2);
+        matrix.setMatrixValues(1, 1, 1);
+        matrix.setMatrixValues(1, 0, 2);
+        Strings.printObjectInConsole(matrix);
+        Strings.printObjectInConsole(new Person("James", "Hawkins", 236232));
+        Strings.printObjectInConsole(new Point(1, 4, 3));
+        Strings.printObjectInConsole(new NamedPoint("x", 1, 4, 3));
+        Strings.printObjectInConsole(7);
+        Strings.printObjectInConsole(9.);
     }
 }
