@@ -1,6 +1,8 @@
 package ru.ssau.tk.sergunin.practoop.MyArray;
 
 import java.util.Arrays;
+import java.util.Collection;
+import java.util.LinkedList;
 
 public class MyArray {
     public static double[] generatorNewArray(int count) {
@@ -399,6 +401,11 @@ public class MyArray {
         return result;
     }
 
+    static Collection<String> toHexString(int[] values) {
+        Collection<String> hexStrings = new LinkedList<>();
+        java.util.Arrays.stream(values).forEach(value -> hexStrings.add(Integer.toHexString(value)));
+        return hexStrings;
+    }
 }
 
 
