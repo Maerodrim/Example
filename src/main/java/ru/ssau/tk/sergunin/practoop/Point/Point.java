@@ -15,4 +15,9 @@ public class Point {
     public static double length(Point a) {
         return (Math.sqrt(a.pointX * a.pointX + a.pointY * a.pointY + a.pointZ * a.pointZ));
     }
+
+    @Override
+    public String toString() {
+        return "[" + pointX + ", " + pointY + ", " + pointZ + "]";
+    }
 }

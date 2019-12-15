@@ -82,4 +82,8 @@ public class Person {
         this.passportId = passportId;
         this.gender = gender;
     }
+    @Override
+    public String toString() {
+        return firstName + (firstName.isEmpty() || lastName.isEmpty() ? "" : " ") + lastName;
+    }
 }

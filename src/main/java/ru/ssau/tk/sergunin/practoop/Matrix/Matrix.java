@@ -1,5 +1,7 @@
 package ru.ssau.tk.sergunin.practoop.Matrix;
 
+import java.util.StringJoiner;
+
 public class Matrix {
     private double[][] matrix;
     private int n, m;
@@ -39,5 +41,19 @@ public class Matrix {
 
     public int getN() {
         return n;
+    }
+
+    @Override
+    public String toString(){
+        StringJoiner outerJoiner = new StringJoiner(";\n");
+        StringJoiner innerJoiner = new StringJoiner(",");
+        for (double[] row : matrix) {
+            for (double element : row) {
+                innerJoiner.add(element + "");
+            }
+            outerJoiner.add(innerJoiner.toString());
+            innerJoiner = new StringJoiner(",");
+        }
+        return outerJoiner.toString() + ";";
     }
 }
