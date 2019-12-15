@@ -11,4 +11,10 @@ public class StringsTest {
         String str ="testReturnString";
         Strings.returnString(str);
     }
+
+    @Test
+    public void testPrintBytes() {
+        String str ="testПринтBytes";
+        Strings.printBytes(str);
+    }
 }
