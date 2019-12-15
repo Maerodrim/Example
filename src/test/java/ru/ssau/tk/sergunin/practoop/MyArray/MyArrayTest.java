@@ -294,4 +294,9 @@ public class MyArrayTest {
         assertTrue(MyArray.isSort(arr));
         assertFalse(MyArray.isSort(arrNaN));
     }
+
+    @Test
+    public void testToString() {
+        MyArray.toString("first", "second", "third", "fourth", "fifth");
+    }
 }
