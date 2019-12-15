@@ -299,4 +299,9 @@ public class MyArrayTest {
     public void testToString() {
         MyArray.toString("first", "second", "third", "fourth", "fifth");
     }
+
+    @Test
+    public void testMultiply() {
+        assertEquals(MyArray.multiply(new Double[]{1., 2., 3., Double.NEGATIVE_INFINITY, Double.NaN, 4., 5.}).doubleValue(), 120);
+    }
 }
