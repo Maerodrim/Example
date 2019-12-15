@@ -7,6 +7,8 @@ import ru.ssau.tk.sergunin.practoop.Person.Person;
 import ru.ssau.tk.sergunin.practoop.Point.NamedPoint;
 import ru.ssau.tk.sergunin.practoop.Point.Point;
 
+import java.nio.charset.StandardCharsets;
+
 import static org.testng.Assert.*;
 
 public class StringsTest {
@@ -161,5 +163,11 @@ public class StringsTest {
     @Test
     public void testPrintDefaultCharset() {
         Strings.printDefaultCharset();
+    }
+
+    @Test
+    public void testDefaultCharsetToCharset() {
+        String str = "Я просто выгляжу как лось, а в душе я бабочка.";
+        Strings.defaultCharsetToCharset(str, StandardCharsets.ISO_8859_1, StandardCharsets.UTF_8);
     }
 }

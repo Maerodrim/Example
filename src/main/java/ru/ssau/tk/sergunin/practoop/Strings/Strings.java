@@ -1,5 +1,6 @@
 package ru.ssau.tk.sergunin.practoop.Strings;
 
+import java.nio.charset.Charset;
 import java.util.Objects;
 
 public class Strings {
@@ -137,5 +138,11 @@ public class Strings {
 
     public static void printDefaultCharset() {
      System.out.println(java.nio.charset.Charset.defaultCharset());
+    }
+
+    public static void defaultCharsetToCharset(String str, Charset one, Charset two) {
+      String str2 = new String(str.getBytes(one),two);
+        System.out.println(java.nio.charset.Charset.defaultCharset());
+        System.out.println(str2);
     }
 }
