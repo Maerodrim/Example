@@ -76,10 +76,16 @@ public class Strings {
         return preficsAndPostfics(str, startWith, endsWith);
     }
 
-    public static String recursiveReplaceAll(String base, String replaceable, String replacer){
-        for (int i = 0; i < 100 && base.contains(replaceable); i++){
-            base = base.replaceAll(replaceable, replacer);
+    public static String recursiveReplaceAll(String str, String replaceable, String replacer){
+        for (int i = 0; i < 100 && str.contains(replaceable); i++){
+            str = str.replaceAll(replaceable, replacer);
         }
-        return base;
+        return str;
+    }
+    public static String extendedSubstring(String base, int from, int to) {
+        if (from >= to) return "";
+        if (from < 0) from = 0;
+        if (to > base.length()) to = base.length();
+        return base.substring(from, to);
     }
 }
