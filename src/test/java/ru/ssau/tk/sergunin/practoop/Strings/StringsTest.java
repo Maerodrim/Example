@@ -43,4 +43,9 @@ public class StringsTest {
         assertFalse(Strings.equalsCaseString(firstString, null));
         assertFalse(Strings.equalsCaseString(null, null));
     }
+
+    @Test
+    public void testPrintChars() {
+        Strings.printChars();
+    }
 }
