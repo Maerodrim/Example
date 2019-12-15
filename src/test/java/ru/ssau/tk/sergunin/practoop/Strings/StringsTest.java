@@ -123,4 +123,18 @@ public class StringsTest {
         Strings.printObjectInConsole(7);
         Strings.printObjectInConsole(9.);
     }
+
+    @Test
+    public void testUpperCaseSplit() {
+        String first = "Такой вот парадокс: мы совершаем подвиги для тех, кому до нас нет никакого дела, а любят нас те, кому мы нужны и без всяких подвигов...";
+        String second = "Я просто выгляжу как лось, а в душе я бабочка.";
+        String[] firstStrings = Strings.upperCaseSplit(first);
+        String[] secondStrings = Strings.upperCaseSplit(second);
+        for (String string : firstStrings) {
+            System.out.println(string);
+        }
+        for (String string : secondStrings) {
+            System.out.println(string);
+        }
+    }
 }
