@@ -102,4 +102,7 @@ public class Strings {
         }
         return strings;
     }
+    public static String concatArray(String[] array) {
+        return String.join(", ", array);
+    }
 }

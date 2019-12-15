@@ -137,4 +137,10 @@ public class StringsTest {
             System.out.println(string);
         }
     }
+
+    @Test
+    public void testConcatArray() {
+        String[] strings = {"Я", "просто", "выгляжу", "как", "лось", "а", "в", "душе", "я", "бабочка"};
+        assertEquals(Strings.concatArray(strings), "Я, просто, выгляжу, как, лось, а, в, душе, я, бабочка");
+    }
 }
