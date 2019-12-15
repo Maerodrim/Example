@@ -30,4 +30,17 @@ public class StringsTest {
         System.out.println(Strings.palindromString(str));
         System.out.println(Strings.palindromString(str2));
     }
+
+    @Test
+    public void testEqualsCaseString() {
+        String firstString = "TEST";
+        String secondString = "test";
+        String thirdString = "false";
+        assertTrue(Strings.equalsCaseString(firstString, secondString));
+        assertFalse(Strings.equalsCaseString(secondString, secondString));
+        assertFalse(Strings.equalsCaseString(secondString, thirdString));
+        assertFalse(Strings.equalsCaseString(null, secondString));
+        assertFalse(Strings.equalsCaseString(firstString, null));
+        assertFalse(Strings.equalsCaseString(null, null));
+    }
 }

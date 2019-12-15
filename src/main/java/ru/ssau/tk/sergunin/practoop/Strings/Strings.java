@@ -1,5 +1,7 @@
 package ru.ssau.tk.sergunin.practoop.Strings;
 
+import java.util.Objects;
+
 public class Strings {
     public static void returnString(String str){
         for(int i=0;i<str.length();i++){
@@ -23,5 +25,10 @@ public class Strings {
             if(!(str.charAt(i)==str.charAt(str.length()-1-i))) return false;
         }
         return true;
+    }
+    public static boolean equalsCaseString(String str,String str2){
+
+        if(!Objects.equals(null, str) && !Objects.equals(null, str2)&&!str.equals(str2) && str.equalsIgnoreCase(str2)) return true;
+        return false;
     }
 }
