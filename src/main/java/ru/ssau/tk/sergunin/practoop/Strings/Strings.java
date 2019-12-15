@@ -18,4 +18,10 @@ public class Strings {
         System.out.println(first == second);
         System.out.println(first.equals(second));
     }
+    public static boolean palindromString(String str){
+        for(int i=0;i<(str.length()/2);i++){
+            if(!(str.charAt(i)==str.charAt(str.length()-1-i))) return false;
+        }
+        return true;
+    }
 }

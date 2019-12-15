@@ -22,4 +22,12 @@ public class StringsTest {
     public void testStringEquals() {
         Strings.stringEquals();
     }
+
+    @Test
+    public void testPalindromString() {
+        String str ="False";
+        String str2 ="TrueeurT";
+        System.out.println(Strings.palindromString(str));
+        System.out.println(Strings.palindromString(str2));
+    }
 }
