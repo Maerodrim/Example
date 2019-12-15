@@ -93,6 +93,7 @@ public class Strings {
     public static void printObjectInConsole(Object obj) {
         System.out.println(obj);
     }
+
     public static String[] upperCaseSplit(String string) {
         String[] strings = string.split(" ");
         for (int i = 0; i < strings.length; i++) {
@@ -102,7 +103,24 @@ public class Strings {
         }
         return strings;
     }
+
     public static String concatArray(String[] array) {
         return String.join(", ", array);
+    }
+
+    public static String replaceNumbersAndRevert(String string) {
+        StringBuilder builder = new StringBuilder(string);
+        int j = -2;
+        int t;
+        for (int i = 0; i < string.length(); i += 2) {
+            j += 2;
+            builder.replace(j, j + 1, i + "");
+            t = j;
+            while (t > 9) {
+                t /= 10;
+                j++;
+            }
+        }
+        return builder.reverse().toString();
     }
 }

@@ -143,4 +143,9 @@ public class StringsTest {
         String[] strings = {"Я", "просто", "выгляжу", "как", "лось", "а", "в", "душе", "я", "бабочка"};
         assertEquals(Strings.concatArray(strings), "Я, просто, выгляжу, как, лось, а, в, душе, я, бабочка");
     }
+
+    @Test
+    public void testReplaceNumbersAndRevert() {
+        assertEquals(Strings.replaceNumbersAndRevert("imperturbability"), "y41i21i01a8r6t4e2m0");
+    }
 }
