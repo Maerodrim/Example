@@ -75,4 +75,11 @@ public class StringsTest {
         assertEquals(Strings.indexOfLastEntryInFirstPartOfBase(first, "мер"), 67);
         assertEquals(Strings.indexOfLastEntryInFirstPartOfBase(first, "мон"), -1);
     }
+
+    @Test
+    public void testPreficsAndPostfics() {
+        String[] strings = {"Only","a","slight","light","was","getting","into","sight"};
+        assertEquals(Strings.preficsAndPostfics(strings, "s", "t"), 2);
+        assertEquals(Strings.preficsAndPostfics(strings, "r", "i"), 0);
+    }
 }

@@ -54,4 +54,11 @@ public class Strings {
     public static int indexOfLastEntryInFirstPartOfBase(String str, String str2) {
         return str.lastIndexOf(str2, str.length()/2);
     }
+    public static int preficsAndPostfics(String[] str, String startWith, String endsWith) {
+        int value=0;
+        for(int i=0;i< str.length;i++){
+            if(str[i].startsWith(startWith)&&str[i].endsWith(endsWith)) value++;
+        }
+        return value;
+    }
 }
