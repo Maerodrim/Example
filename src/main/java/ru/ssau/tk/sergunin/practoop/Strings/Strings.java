@@ -50,4 +50,8 @@ public class Strings {
     public static int indexOfFirstEntryInSecondPartOfBase(String str, String str2) {
         return str.indexOf(str2, str.length()/2);
     }
+
+    public static int indexOfLastEntryInFirstPartOfBase(String str, String str2) {
+        return str.lastIndexOf(str2, str.length()/2);
+    }
 }

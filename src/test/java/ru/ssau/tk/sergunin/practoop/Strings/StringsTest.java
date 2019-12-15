@@ -66,4 +66,13 @@ public class StringsTest {
         assertEquals(Strings.indexOfFirstEntryInSecondPartOfBase(first, "жи"), 323);
         assertEquals(Strings.indexOfFirstEntryInSecondPartOfBase(second, "мир"), -1);
     }
+    @Test
+    public void testIndexOfLastEntryInFirstPartOfBase() {
+        String first = "Иногда случается, что вещи теряют свой смысл. Вот смысл окна, например, чтобы в него смотреть. А порой смотришь в него, а смотреть там нечего. Ничего интересного.\n" +
+                "Или вот, какой смысл умываться по утрам? Чтобы быть бодрым? А какой смысл быть по утрам бодрым? Какой вообще смысл БЫТЬ по утрам? Непонятно.\n" +
+                "И непонятно, то ли жизнь всегда была бессмысленной, а ты просто не замечал этого, то ли смысл был, но куда-то затерялся.";
+        String second = "А климат переменится - вот увидишь";
+        assertEquals(Strings.indexOfLastEntryInFirstPartOfBase(first, "мер"), 67);
+        assertEquals(Strings.indexOfLastEntryInFirstPartOfBase(first, "мон"), -1);
+    }
 }
