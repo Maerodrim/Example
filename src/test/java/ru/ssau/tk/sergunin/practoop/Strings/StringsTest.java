@@ -82,4 +82,11 @@ public class StringsTest {
         assertEquals(Strings.preficsAndPostfics(strings, "s", "t"), 2);
         assertEquals(Strings.preficsAndPostfics(strings, "r", "i"), 0);
     }
+
+    @Test
+    public void testPreficsAndPostficsNoProbel() {
+        String[] strings = {"    Only  ","  a  ","  slight  ","  light  "," was","getting","into","sight"};
+        assertEquals(Strings.preficsAndPostfics(strings, "s", "t"), 1);
+        assertEquals(Strings.preficsAndPostfics(strings, "r", "i"), 0);
+    }
 }
