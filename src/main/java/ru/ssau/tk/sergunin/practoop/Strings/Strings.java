@@ -134,4 +134,8 @@ public class Strings {
         }
         return builder.toString();
     }
+
+    public static void printDefaultCharset() {
+     System.out.println(java.nio.charset.Charset.defaultCharset());
+    }
 }

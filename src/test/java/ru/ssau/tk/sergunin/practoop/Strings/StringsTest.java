@@ -157,4 +157,9 @@ public class StringsTest {
         assertThrows(IllegalArgumentException.class, () -> Strings.getStrEnumOfNumsInAscOrder(-1));
         System.out.println(Strings.getStrEnumOfNumsInAscOrder(10000));
     }
+
+    @Test
+    public void testPrintDefaultCharset() {
+        Strings.printDefaultCharset();
+    }
 }
