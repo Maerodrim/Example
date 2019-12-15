@@ -43,4 +43,11 @@ public class Strings {
         System.out.println("Символ\\№" + ++i);
     }
 
+    public static int firstOccurrenceString(String str,String str2) {
+        return str.indexOf(str2);
+    }
+
+    public static int indexOfFirstEntryInSecondPartOfBase(String str, String str2) {
+        return str.indexOf(str2, str.length()/2);
+    }
 }
