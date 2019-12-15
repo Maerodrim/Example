@@ -1,5 +1,6 @@
 package ru.ssau.tk.sergunin.practoop.Strings;
 
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import static org.testng.Assert.*;
@@ -88,5 +89,10 @@ public class StringsTest {
         String[] strings = {"    Only  ","  a  ","  slight  ","  light  "," was","getting","into","sight"};
         assertEquals(Strings.preficsAndPostfics(strings, "s", "t"), 1);
         assertEquals(Strings.preficsAndPostfics(strings, "r", "i"), 0);
+    }
+
+    @Test
+    public void testRecursiveReplaceAll() {
+        Assert.assertEquals(Strings.recursiveReplaceAll("opopopopo", "opo", "po"), "popppo");
     }
 }

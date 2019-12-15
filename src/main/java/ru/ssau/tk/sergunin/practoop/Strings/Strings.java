@@ -71,8 +71,15 @@ public class Strings {
     public static int preficsAndPostficsNoProbel(String[] str, String startWith, String endsWith) {
         int value = 0;
         for (int i = 0; i < str.length; i++) {
-            str[i]=str[i].trim();
+            str[i] = str[i].trim();
         }
-        return preficsAndPostfics(str,startWith,endsWith);
-}
+        return preficsAndPostfics(str, startWith, endsWith);
+    }
+
+    public static String recursiveReplaceAll(String base, String replaceable, String replacer){
+        for (int i = 0; i < 100 && base.contains(replaceable); i++){
+            base = base.replaceAll(replaceable, replacer);
+        }
+        return base;
+    }
 }
