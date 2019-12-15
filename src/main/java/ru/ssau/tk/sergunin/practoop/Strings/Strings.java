@@ -12,4 +12,10 @@ public class Strings {
             System.out.println(bytes[i]);
         }
     }
+    public static void stringEquals(){
+        String first = "testEquals";
+        String second = new String(first);
+        System.out.println(first == second);
+        System.out.println(first.equals(second));
+    }
 }

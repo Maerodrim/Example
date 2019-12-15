@@ -17,4 +17,9 @@ public class StringsTest {
         String str ="testПринтBytes";
         Strings.printBytes(str);
     }
+
+    @Test
+    public void testStringEquals() {
+        Strings.stringEquals();
+    }
 }
